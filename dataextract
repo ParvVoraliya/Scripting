@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+read -p "put file/its location of source file:" file1
+
+if[[! -f $file1 ]]; then
+       echo "file does not exists"
+       exit 1
+fi
+
+read -p "put destination file where you want to write:" file2
+
+if[[! -f $file1 ]]; then
+       echo "file does not exists"
+       exit 1
+fi
+
+read -p "Enter specific words which you want to extract from file:" word
+
+grep $word $file1 >> $file2
+
+batcat $file2
+

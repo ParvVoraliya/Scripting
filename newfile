@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+read -p "Enter base filename: " name
+read -p "Enter number of files: " n
+
+for ((i=1; i<=n; i++))
+do
+    touch "${name}${i}"
+done
+
+echo "$n files created."
+ls
+

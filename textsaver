@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+read -p "Enter The Path Of filr In which you want to write:" file
+
+if [[ ! -f "$file" ]];then
+       echo "file does not exist"
+       exit 1
+fi
+
+read -p "What You Want To Write In File:" inp
+read -p "how many times you want to write:" t
+
+for((i=0;i<=$t;i++))
+do
+ echo "${inp}" >> $file
+done
+
+echo "your wriiten content is:"
+
+batcat $file
