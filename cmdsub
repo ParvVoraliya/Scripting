@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+count=$(ls | wc -l)
+echo "Total File Count is:$count"
+
+echo "Today is $(date)"
+
+user=$(whoami) 
+echo "Logged in as $user"
+
+
+func-date/name(){
+   echo "my name is:$(whoami) and todays date is:$(date)"
+}
+
+
+echo "$(func-date/name)"
+

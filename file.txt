@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+s=$1
+s1=$#
+if (( $# == 0 ))then
+	echo give an argument
+fi
+
+case $s in  
+	parv)
+		echo "ohh hii parv"
+		;;
+	nevil)
+		echo "ohh hi nevil"
+		;;
+	ayush)
+		echo "ohh hi ayush"
+		;;
+
+	*)
+		echo your access is denied
+		;;
+esac
+
+echo "total arguments given is: $s1"
