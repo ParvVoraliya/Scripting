@@ -5,6 +5,7 @@ if (( $# == 0 ))then
         exit 1
 fi
 
+# using for loop for checking all the given arguments
 for name in "$@"; do
       case "$name" in  
 	parv)  echo "ohh hii parv";;
