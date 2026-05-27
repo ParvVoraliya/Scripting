@@ -10,3 +10,15 @@ for x in "${array[*]}"; do
     echo "item in array is $x"
 done
 
+first_array=(
+foo
+bar
+baz
+)
+second_array=("${first_array[@]}")
+second_array+=(buddy guy joe)
+
+for item in "${second_array[@]}"; do
+echo "item is: $item"
+
+done
